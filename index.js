@@ -12,7 +12,12 @@ const PORT=process.env.PORT;
 //const PORT=8000;
 export const app=express(); 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials:true,
+}
+
+));
 async function createConnection(){
     const client=new MongoClient(MONGO_URL);
     await client.connect();
