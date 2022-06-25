@@ -13,7 +13,7 @@ const PORT=process.env.PORT;
 export const app=express(); 
 app.use(express.json());
 app.use(cors({
-    origin:"https://dayheroku.herokuapp.com",
+    origin:"http://localhost:3000",
     credentials:true,
 }
 
