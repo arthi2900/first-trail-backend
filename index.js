@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors({
     allowedHeaders:"*",
     allowMethods:"*",
-    origin :"http://localhost:3000",
+    origin :"http://localhost:3000/User",
 }));
 async function createConnection(){
     const client=new MongoClient(MONGO_URL);
