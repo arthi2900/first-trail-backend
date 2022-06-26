@@ -2,13 +2,14 @@ import  express from 'express';
 import {MongoClient} from "mongodb";
 import  {UserRouter} from './Userdata.js';
 import  {PosterRouter} from './Posterdata.js';
+
 import cors from "cors";
 import dotenv from 'dotenv';
 import bcrypt from "bcrypt";
 dotenv.config();
 //const MONGO_URL="mongodb://localhost/";
 const MONGO_URL=process.env.MONGO_URL;
-const PORT=process.env.PORT;
+const PORT=process.env.PORT || 3000;
 //const PORT=8000;
 export const app=express(); 
 app.use(express.json());
